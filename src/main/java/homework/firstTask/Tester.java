@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 public class Tester {
     private static Object lock = new Object();
 
-    public static synchronized void start(Object obj) throws InvocationTargetException, IllegalAccessException {
+    public static void start(Object obj) throws InvocationTargetException, IllegalAccessException {
         Class c = obj.getClass();
         Method[] methods = c.getDeclaredMethods();
         int countBS = 0;
